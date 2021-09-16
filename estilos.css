@@ -1,0 +1,256 @@
+#container{
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   background-image: url("ce.png");
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.texto1{
+   top: 0;
+   text-align: center;
+   font-size: 3em;
+   z-index: 2;
+}
+
+.texto2{
+   position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+
+.enlace{
+   position: relative;
+   top: 50.2%;
+   left: 32.2%;
+   width: 33.4%;
+   height: 5%;
+   z-index: 2;
+}
+
+#enlace{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 3;
+   animation: enlace 2s infinite;
+   animation-delay: 1s;
+}
+
+@keyframes enlace{
+   0%{}
+   50%{
+      background-color: whitesmoke;
+      opacity: 0.1;
+   }
+   100%{}
+}
+
+
+.texto1 p{
+   animation: texto 5s ease infinite;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.texto2 p{
+   animation: texto 5s reverse infinite;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes texto{
+   
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    80% {
+         transform: translateY(0);
+         opacity: 1;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    100% {
+         transform: translateY(50px);
+         opacity: 0;
+        clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+    }
+  
+}
+
+.arbol {
+  position: relative;
+   left: 60%;
+   top: 63%;
+   width: 285px;
+   height: 306px;
+   background: url(arbol.png);
+   z-index: 2;
+   animation: arbol 1s steps(2) infinite;
+ }
+ @keyframes arbol {
+   100% { background-position: 0 -612px; }
+}
+
+.muñeco {
+   position: relative;
+    left: 20%;
+    top: 28%;
+    width: 400px;
+    height: 425px;
+    background: url(muñeco.png);
+    z-index: 2;
+    animation: muñeco 1s steps(2) infinite;
+  }
+  @keyframes muñeco {
+    100% { background-position: 0 -850px; }
+ }
+ 
+ @keyframes nieve{
+    from {top: 5%;}
+    to {top: 80%;}
+ }
+       
+ @keyframes copos1{
+     0% { transform: rotate(-90deg) translate(0px, 0px);}
+     100% { transform: rotate(90deg) translate(10px, 75px);}
+ } 
+ @keyframes copos2{
+    0% { transform: rotate(90deg) translate(10px, 75px);}
+    100% { transform: rotate(-90deg) translate(0px, 0px);}
+}
+
+ #snow div {
+    position: absolute;
+    top: 0;
+    animation-name: nieve, copos1, copos2;
+    animation-iteration-count: infinite; 
+    animation-direction: normal; 
+    animation-timing-function: ease-in;
+ }
+ .copos1, .copos2 {
+    color: #fff;
+    font-size: 1em;
+    position: absolute;   
+ }
+
+ .copos1.f4 {
+    font-size: 6em;
+    left: 24%;
+    animation-delay: 0.5s;
+    animation-duration: 6s;   
+ } 
+ .copos1.f5 {
+    font-size: 2em;
+    left: 30%;
+    animation-delay: 1s;
+    animation-duration: 5s;   
+ }
+ .copos1.f6 {
+    font-size: 6em;
+    left: 36%;
+    animation-delay: 2s;
+    animation-duration: 7s;   
+ }
+ .copos1.f7 {
+    font-size: 3em;
+    left: 42%;
+    animation-delay: 3s;
+    animation-duration: 8s;   
+ }
+ .copos1.f8 {
+    font-size: 7em;
+    left: 48%;
+    animation-delay: 0.5s;
+    animation-duration: 6s;   
+ } 
+ .copos1.f9 {
+    font-size: 4em;
+    left: 54%;
+    animation-delay: 2s;
+    animation-duration: 5s;   
+ }
+ .copos1.f10 {
+    font-size: 2em;
+    left: 60%;
+    animation-delay: 1s;
+    animation-duration: 7s;   
+ }
+ .copos1.f11 {
+    font-size: 5em;
+    left: 66%;
+    animation-delay: 0.5s;
+    animation-duration: 8s;   
+ }
+ .copos1.f12 {
+    font-size: 1em;
+    left: 72%;
+    animation-delay: 1.5s;
+    animation-duration: 6s;   
+ } 
+ .copos1.f13 {
+    font-size: 5em;
+    left: 78%;
+    animation-delay: 0.5s;
+    animation-duration: 5s;   
+ }
+
+ .copos2.f4 {
+    font-size: 5em;
+    left: 21%;
+    animation-duration: 7.5s;   
+ } 
+ .copos2.f5 {
+    font-size: 1em;
+    left: 27%;
+    animation-duration: 8.5s;   
+ }
+ .copos2.f6 {
+    font-size: 5em;
+    left: 33%;
+    animation-duration: 6.5s;   
+ }
+ .copos2.f7 {
+    font-size: 2em;
+    left: 39%;
+    animation-duration: 5.5s;   
+ }
+ .copos2.f8 {
+    font-size: 4em;
+    left: 45%;
+    animation-duration: 7.5s;   
+ } 
+ .copos2.f9 {
+    font-size: 7em;
+    left: 51%;
+    animation-duration: 8.5s;   
+ }
+ .copos2.f10 {
+    font-size: 3em;
+    left: 57%;
+    animation-duration: 6.5s;   
+ }
+ .copos2.f11 {
+    font-size: 6em;
+    left: 63%;
+    animation-duration: 5.5s;   
+ }
+ .copos2.f12 {
+    font-size: 2em;
+    left: 69%;
+    animation-duration: 7.5s;   
+ } 
+ .copos2.f13 {
+    font-size: 6em;
+    left: 75%;
+    animation-duration: 8.5s;   
+ }
